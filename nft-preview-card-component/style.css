@@ -35,7 +35,7 @@ body {
 }
 
 h1 {
-    display:none;
+    display:hidden;
 }
 /* ================= CARD THAT CONTAINS ALL INFO =============== */
 .outer-box {

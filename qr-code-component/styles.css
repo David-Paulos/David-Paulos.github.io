@@ -30,6 +30,10 @@ body {
     font-family:'Outfit', sans-serif;
     background-color: var(--background-color);
 }
+
+h1 {
+display:none;
+}
 /* ================= WHITE CARD THAT CONTAINS ALL INFO =============== */
 .outer-box {
     background-color: var(--color-white);

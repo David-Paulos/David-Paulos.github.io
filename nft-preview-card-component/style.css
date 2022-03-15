@@ -34,6 +34,9 @@ body {
     background-color: var(--Very-dark-blue-main-background);
 }
 
+h1 {
+    display:none;
+}
 /* ================= CARD THAT CONTAINS ALL INFO =============== */
 .outer-box {
     background-color: var(--Very-dark-blue-card-background);

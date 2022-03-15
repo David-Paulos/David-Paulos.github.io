@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* =========== ROOT VARIABLES =============== */
+:root {
+     /*== PRIMARY COLORS ==*/
+     --Soft-blue: hsl(215, 51%, 70%);
+     --Cyan: hsl(178, 100%, 50%);
+     /* == NEUTRAL COLORS == */
+     --Very-dark-blue-main-background: hsl(217, 54%, 11%);
+     --Very-dark-blue-card-background: hsl(216, 50%, 16%);
+     --Very-dark-blue-line: hsl(215, 32%, 27%);
+     --White: hsl(0, 0%, 100%);
+}
+/* ================== HTML PAGE FORMATTING ================*/
+* {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    width:100%;
+    height:100%;
+    font-family:'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-main-background);
+}
+
+/* ================= CARD THAT CONTAINS ALL INFO =============== */
+.outer-box {
+    background-color: var(--Very-dark-blue-card-background);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 430px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 17px;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem hsla(215, 60%, 8%, 0.5),
+                -0.5rem -0.5rem 0.5rem 0.5rem hsl(217, 59%, 8%, 0.5),
+                0.5rem -0.5rem 0.5rem 0.5rem hsl(217, 59%, 8%, 0.5),
+                -0.5rem 0.5rem 0.5rem 0.5rem hsl(217, 59%, 8%, 0.5);
+}
+/* =============== CUBE IMAGE ================ */
+.three-D-cube {
+    width:100%;
+    height:100%;
+    border-radius:10px;
+}
+
+.image-box {
+    width: 232px;
+    height: 232px;
+    object-fit:contain;
+    padding-block-start:14px;
+    margin-block-end:15px;
+}
+
+.hover-eye {
+    width: 232px;
+    height: 218px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    border-radius:10px;   
+}
+
+/* ============= DESCRIPTIVE BOX ============== */
+.descriptive-box { 
+    width:232px;
+    height: 70px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.name-of-card {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 0.93rem;
+}
+
+.description {
+    color: var(--Soft-blue);
+    font-weight: 400;
+    font-size: 0.80rem;
+}
+
+.displayment-of-content {
+    width:232px;
+    padding:1rem 0rem;
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 0.70rem;
+    display:flex;
+    justify-content: space-between;
+    border-block-end: 1px solid var(--Very-dark-blue-line);    
+}
+
+.cyan-text {
+    color: var(--Cyan);
+    font-weight: 900;
+    
+}
+
+ul {
+    display:flex;
+}
+
+li img {
+    padding-inline-end: .3rem;
+}
+
+.card-bottom {
+    margin-block-start: 1rem;
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 0.70rem;
+    
+}
+
+.card-bottom a {
+    color: var(--White);
+}
+
+/* ============ ON HOVER STATE ========== */
+
+.card-bottom a:hover, .name-of-card:hover {
+    cursor:pointer;
+    color: var(--Cyan);
+}
+
+.hover-eye:hover {
+    cursor:pointer;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    background-image: url(./images/icon-view.SVG);
+    background-repeat: no-repeat;
+    background-position:center;
+
+}
+
+/* ============== MEDIA QUERIES FOR SMARTPHONES ============ */
+
+@media screen and (max-height: 530px){
+
+    /* ================= WHITE CARD THAT CONTAINS ALL INFO =============== */
+    .outer-box {
+        height: 320px;
+    }
+    /* =============== QR CODE ================ */
+    .image-box {
+        height: 142px;
+    }
+    .hover-eye {
+        height: 129px;
+    }
+    .card-bottom {
+        margin-block-start: 0.5rem;
+    }
+
+}

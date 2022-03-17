@@ -121,9 +121,10 @@ main {
     margin-right:4.2rem;
 }
 
-.annual-plan h4 {
+.annual-plan h2 {
     color: var(--Dark-blue);
     font-weight: 900;
+    font-size: 1rem;
 }
 
 .annual-plan p {

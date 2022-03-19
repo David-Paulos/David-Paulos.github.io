@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    /*====== Primary ======*/
+    --Very-dark-blue: hsl(233, 47%, 7%); /* main background */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /* card background */
+    --Soft-violet: hsl(277, 64%, 61%); /* accent */
+   
+   /*======= Neutral ========*/
+   --White: hsl(0, 0%, 100%); /* main heading, stats */
+   --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* main paragraph */
+   --Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6); /*  stat headings */
+}
+
+/* ================== HTML PAGE FORMATTING ================*/
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-dark-blue);
+
+}
+
+header {
+    width:100%;
+}
+
+header p {
+    color: white;
+}
+header a {
+    color: var(--Soft-violet);
+}
+
+
+ main {
+     width:100%;
+     min-height:100vh;
+     display:flex;
+     align-items: center;
+     justify-content: center; 
+}
+
+.attribution {
+    text-align: center;
+    font-family:'Lexend Deca', sans-serif;
+}
+/* ================= CARD THAT CONTAINS ALL INFO =============== */
+
+main .card-contains-all-info {
+    width:80%;
+    height:423px;
+    background-color: var(--Dark-desaturated-blue);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+/* ============ TEXT CARD ============ */
+main .text-card {
+    width:50%;
+    height:100%; 
+    display:flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+main .content-box {
+    width: 71%;
+    height: 71%;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+
+}
+
+main .content-box h1 {
+    color: var(--White);
+    font-weight: 700;
+    font-size: 2.24rem;
+}
+
+main .content-box span {
+    color: var(--Soft-violet);
+}
+
+main .content-box p {
+    color: var(--Slightly-transparent-white);
+    font-weight: 400;
+    
+}
+
+main .style-p {
+    margin-block-end: 3.5rem;
+
+}
+
+/* ============ STATS PART =========== */
+main .stats-list {
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .stats-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height:3rem;
+    justify-content: space-between;
+}
+
+main li:nth-of-type(1) {
+    color: var(--White);
+    font-weight: 700;
+    
+}
+main li:nth-of-type(2) {
+    color: var(--Slightly-transparent-white-stat);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+
+
+/* ================== IMAGE CARD =============== */
+
+main .image-card {
+    width:50%;
+    height:100%;
+    background-color: hsl(277, 64%, 61%);
+    background-image: url(./images/image-header-desktop.JPG);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-blend-mode:soft-light;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+   
+}
+
+main .image-card .accent {
+    width:100%;
+    height: 100%;
+    background-color: hsl(293, 77%, 40%);
+    mix-blend-mode:soft-light;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;  
+      
+}
+/* =============== MEDIA QUERIES =========== */
+/* =============== TABLET ============= */
+@media screen and (max-width: 1328px) {
+    
+    main .content-box h1 {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 1184px) {
+    
+    main .content-box h1 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 1065px) {
+    
+    main .content-box h1 {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    
+    main .content-box h1 {
+        font-size: 1.5rem;
+    }
+
+    main .style-p {
+        margin-block-end:0;
+    }
+
+    main .stats-list ul {
+        align-items: center;
+    }
+
+    main li:nth-of-type(2) {
+        font-size: 0.7rem;
+    }
+
+    main .image-card {
+        background-position:right ;
+    }
+
+    main .stats-list {
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 892px) {
+    
+    main .content-box h1 {
+        font-size: 1.4rem;
+    }    
+}
+
+@media screen and (max-width: 838px) {
+    
+    main .content-box h1 {
+        text-align: center;
+    }
+
+    main .content-box p {
+        text-align:center;
+    }
+
+    main .stats-list {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 715px) {
+
+    main li:nth-of-type(2) {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 649px) {
+
+    main li:nth-of-type(1) {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 603px) {
+
+    main li:nth-of-type(2) {
+        font-size: 0.5rem;
+    }
+}
+/* =============== MOBILE ===================*/
+
+@media screen and (max-width: 553px) {
+
+    main .card-contains-all-info {
+        flex-direction:column-reverse;
+        align-items:center;
+        width:90%;
+        height:900px;
+    }
+
+    main .image-card {
+        width:100%;
+        height:35%;
+        background-image: url(./images/image-header-mobile.JPG);
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-right-radius: 0;
+    }
+    
+    main .image-card .accent {
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-right-radius: 0;
+    }
+
+    main .text-card {
+        width:100%;
+        height:65%;
+    }
+
+    main .content-box {
+        width: 80%;
+        height: 100%;
+        align-items:center;
+        justify-content:space-evenly;
+    }
+
+    main .content-box h1 {
+        font-size: 2.24rem;
+    }
+
+    main .content-box p {
+        font-size:initial;
+    }
+
+    main .style-p {
+        margin-block-end: 2rem;
+    }
+
+    /* ============ STATS PART =========== */
+
+    main .stats-list {
+        height:35%;
+        flex-direction: column;
+    }
+    main .stats-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:3rem;
+        justify-content: space-between;
+    }
+
+    main li:nth-of-type(1){
+        font-size:initial;
+    }
+    
+    main li:nth-of-type(2){
+        font-size:0.8rem;
+    }
+}

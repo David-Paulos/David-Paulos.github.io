@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    /*====== Primary ======*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+   
+   /*======= Neutral ========*/
+    --paragraphs: hsla(0, 0%, 100%, 0.75); /* Transparent white */
+    --background-headings-buttons: hsl(0, 0%, 95%); /* Very light gray */
+}
+
+/* ================== HTML PAGE FORMATTING ================*/
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-headings-buttons);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header p {
+    text-align: center;
+}
+
+main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;       
+    }
+
+/* ================= CARD THAT CONTAINS ALL INFO =============== */
+.cards-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:90%;
+    border-radius: 0.5rem;
+    padding: 1rem 0;    
+}
+
+.cards__inner {
+    width:70%;
+    height:80%;
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.orange-card {
+    background-color: var(--Bright-orange);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height:440px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    
+}
+.cyan-card {
+    background-color: var(--Dark-cyan);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height:440px;
+}
+.dark-cyan-card {
+    background-color: var(--Very-dark-cyan);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height:440px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--background-headings-buttons);
+    font-size:2.5rem;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--background-headings-buttons);
+    font-size:2.5rem;
+}
+
+.cards__inner p {
+    font-weight: 400;
+    color: var(--paragraphs);
+    line-height: 1.5rem;
+
+}
+
+.cards__inner a {
+    background-color: var(--background-headings-buttons);
+    padding: 0.8rem 1.6rem;
+    border:2px solid var(--background-headings-buttons);
+    border-radius:2rem;
+    text-align: center;
+    
+}
+.cards__inner a:hover {
+    background-color: inherit;
+    
+    color: var(--background-headings-buttons);
+}
+
+.orange__a {
+    color: var(--Bright-orange);
+}
+
+.cyan__a {
+    color: var(--Dark-cyan);
+}
+
+.dark-cyan__a {
+    color: var(--Very-dark-cyan-cyan);
+}
+
+/* ================= MEDIA QUERIES ============= */
+
+@media screen and (min-width: 900px) {
+
+    /* ================= CARD THAT CONTAINS ALL INFO =============== */
+    .cards-container {
+        flex-direction: row;
+    }
+    
+    .dark-cyan-card {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .orange-card {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem ;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .cards-container {
+        width:65%;
+    }
+
+    .orange-card, .cyan-card, .dark-cyan-card {
+        height:500px;
+    }
+
+    .cards__inner a {
+        margin-top: 3.5rem;
+    }
+
+}

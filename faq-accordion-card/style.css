@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /*====== Primary ======*/
+    --FAQ: hsl(238, 29%, 16%);
+    --hover-text: hsl(14, 88%, 65%);
+    --questions: hsl(237, 12%, 33%);
+    --paragraphs: hsl(240, 6%, 50%);
+    --divisions: hsl(240, 5%, 91%);
+
+    /* ======== BACKGROUND GRADIENT======= */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);  
+}
+
+/* ================== HTML PAGE FORMATTING ================*/
+/* == MOBILE FIRST DESIGN == */
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: rgb(175,103,233);
+    background: linear-gradient(180deg, rgba(175,103,233,1) 50%, rgba(101,101,231,1) 100%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-block-end: 1rem;
+    width: 100%;
+}
+
+header p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+header a {
+    color:white;
+    font-weight: 700;
+}
+
+main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;       
+}
+
+/*==== ILLUSTRATIVE IMAGES ==== */
+.my-box {
+    width: 250px;
+    height: 120px;
+    position: relative;
+    top: 7rem;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.my-box img {
+    position:absolute;
+    bottom: 2.1rem;
+}
+
+/* ================= CARD THAT CONTAINS ALL INFO =============== */
+
+.faqs-container {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width:90%;
+    min-height: 528px;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1rem 3rem 0rem rgba(31, 31, 99, 0.774);
+}
+
+h1 {
+    text-align: center;
+    color: var(--FAQ);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 7rem;
+    margin-bottom:1rem;
+}
+/* ==================== FAQS SECTION ================== */
+.faqs-section {
+    width: 85%;
+}
+/* == QUESTIONS == */
+.faqs-section h2 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--questions);
+}
+.faqs-section h2:hover {
+    color: var(--hover-text);
+}
+
+details {
+    padding:1rem 0;
+    border-bottom: 1px solid var(--divisions);
+}
+details[open] > summary h2{
+    color: var(--FAQ);
+    font-weight: 700;
+    padding-block-end: 0.70rem;
+}
+
+summary {
+    cursor:pointer;
+    position: relative;
+}
+
+/* ==== ARROW ==== */
+details summary::after {
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/* == ARROW ANIMATION == */
+details[open] summary::after {
+    animation-name:rotation_open;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotation_open {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+details:not([open]) summary:after {
+    animation-name:rotation_close;
+    animation-duration: 250ms;
+}
+
+@keyframes rotation_close {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ==== ANSWERS ==== */
+.faqs-section  p {
+    color: var(--paragraphs);
+    font-weight: 400;
+    line-height: 1rem;
+    padding-inline-end: 2rem;
+}
+/* == TEXT ANIMATION == */
+details[open] > div > p {
+    opacity:0;
+    animation-name: showContent;
+    animation-duration: 350ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* == TEXT SLIDE ANIMATION == */
+details:nth-of-type(5) {
+    margin-bottom: 1rem;
+}
+
+details[open] > div {
+    animation-name: slideDown;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+  
+    to {
+      opacity: 1;
+      height: 3vh;
+      padding-bottom: 2.6rem;
+    }
+}
+
+/* ========================= MEDIA QUERIES ===================== */
+/* == FOR VERY SMALL SCREENS == */
+@media screen and (max-width:364px) {
+
+    details {
+        padding:2.5rem 0;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    /* ================= PAGE FORMATTING ====================== */
+    main {
+        flex-direction: row;
+        position: relative;      
+    }
+    
+    /* ================= CARD THAT CONTAINS ALL INFO =============== */
+    .faqs-container {
+        width:73%;
+        align-items:flex-end;
+        justify-content: center;
+        padding-inline-end: 2.5rem;
+        min-height: 515px;
+        position: relative;
+        background:url(./images/illustration-woman-online-desktop.svg) -87px 70px no-repeat , 
+        url(./images/bg-pattern-desktop.svg) -580px -295px no-repeat, whitesmoke ;
+    }
+
+    .faqs-container::before {
+        content: url(./images/illustration-box-desktop.svg);
+        position:absolute;
+        top:200px;
+        left:-130px;
+        cursor:help;
+    }
+
+    .faqs-container:hover::before {
+        animation-name: rollOn;
+        animation-duration: 1050ms;
+    }
+
+    @keyframes rollOn {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform:rotate(1080deg)
+        }
+    }
+
+    h1 {
+        text-align: left;
+        width:40%;
+        margin-top: 6rem;
+        margin-bottom:2rem;
+    }
+
+    .faqs-section {
+        width: 40%;
+    }
+
+    details:nth-of-type(5) {
+        margin-bottom: 5rem;
+    }
+    /*==== ILLUSTRATIVE IMAGES ==== */
+    .my-box {
+        display:none;
+        width:0;
+        height:0;
+        background-image: none;
+
+    }
+    .my-box img {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .faqs-container {
+        width:73%;
+        padding-inline-end: 6.5rem;
+
+    }
+}

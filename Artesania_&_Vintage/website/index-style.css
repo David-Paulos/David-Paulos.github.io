@@ -95,10 +95,8 @@ main {
 
 main img {
     width:100%;
-    height:20vh;
-
+    height:25vh;
 }
-
 
 .text-box {
     display: flex;
@@ -196,6 +194,10 @@ footer .FAQ a {
     .logo {
         width: 50%;
     }   
+
+    main img {
+        height:35vh;
+    }
 }
 
 @media screen and (min-width:700px) {
@@ -206,6 +208,10 @@ footer .FAQ a {
     .logo {
         width: 40%;
     } 
+
+    main img {
+        height:40vh;
+    }
 
     .text-box {
         width:65%;  
@@ -255,6 +261,7 @@ footer .FAQ a {
         width: 25%;
     }
 
+
     nav {
         display: flex;
         flex-direction: row;
@@ -277,8 +284,7 @@ footer .FAQ a {
 
     main img {
         width:100%;
-        height:30vh;
-    
+        height:50vh;
     }
 
     .favourite-box {
@@ -305,7 +311,7 @@ footer .FAQ a {
     }
 
     main img {
-        height:50vh;
+        height:55vh;
     
     }
 

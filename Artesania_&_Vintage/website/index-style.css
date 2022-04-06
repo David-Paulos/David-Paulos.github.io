@@ -198,6 +198,10 @@ footer .FAQ a {
     main img {
         height:35vh;
     }
+
+    .description-box p {
+        width:65%;
+    }
 }
 
 @media screen and (min-width:700px) {
@@ -220,6 +224,7 @@ footer .FAQ a {
     .favourite-box {
         width:55%;
     }
+
     footer .FAQ {
         width:50%;
         flex-direction: row;
@@ -292,7 +297,7 @@ footer .FAQ a {
     }
 
     .favourite-box img {
-        height: 25vh;
+        height: 45vh;
     }
 
     .description-box p {

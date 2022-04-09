@@ -4,6 +4,7 @@
     --bground-header-footer: #fcf9f5;
     --divisions-backgrounds: #E5ECF0;
     --divisions-backgrounds-lighter: #e5ecf0b1;
+    --divisions-backgrounds-darker: #2d2d3d;
     --buttons: #354a54;
     --span: #b87c4c;
 
@@ -106,8 +107,8 @@ main p {
 .category-banner {
     width:100%;
     height: 18vh;
-    background-color: var(--divisions-backgrounds);
-    color: black;
+    background-color: var(--divisions-backgrounds-darker);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;

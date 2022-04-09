@@ -3,6 +3,7 @@
 :root {
     --bground-header-footer: #fcf9f5;
     --divisions-backgrounds: #E5ECF0;
+    --divisions-backgrounds-darker: #2d2d3d;
     --buttons: #354a54;
     --span: #b87c4c;
 
@@ -96,7 +97,8 @@ main {
 .category-banner {
     width:100%;
     height: 18vh;
-    background-color: var(--divisions-backgrounds);
+    background-color: var(--divisions-backgrounds-darker);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;

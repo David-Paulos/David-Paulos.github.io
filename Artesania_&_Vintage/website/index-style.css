@@ -364,13 +364,13 @@ footer .FAQ a {
 
 @media screen and (min-width:1440px) {
     main img {
-        height: 70vh;
+        height: 74vh;
     }
 }
 
 @media screen and (min-width:1650px) {
     main img {
-        height: 78vh;
+        height: 82vh;
     }
 }
 

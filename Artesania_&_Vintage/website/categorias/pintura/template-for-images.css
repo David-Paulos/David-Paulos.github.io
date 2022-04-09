@@ -88,41 +88,38 @@ nav a:hover {
 main {
     width: 100%;
     min-height: 100vh;
-    display:flex;
-    align-items: center;
-    flex-direction: column;       
 }
 
 .category-banner {
-    width:100%;
-    height: 18vh;
-    background-color: var(--divisions-backgrounds);
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
-    margin:2rem;
+    flex-direction: column;       
+    width:100%;
+    height: 14vh;
+    background-color: var(--divisions-backgrounds); 
+    margin:2rem 0 4rem;
 }
 
 .images-container {
-    width:90%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    width:100%;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
+    gap:4rem 2rem;
 }
 
 figure {
-    width: 280px;
-    height:220px;  
-    margin: 2rem;
+    width: 154px;
+    height:205px;  
     margin-bottom: 5rem;  
 }
 figure img {
     width: 100%;
     height:100%;
-    border-radius: 1.5rem;
 }
 figcaption {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,15 +127,23 @@ figcaption {
 
 figcaption ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items:center;
-    width:250px;
+    /* width:250px; */
     margin-top: 0.7rem;
+    font-size: 18px;
 }
 
 figcaption ul li:first-child {
-    width: 70%;
+    /* width: 100%; */
+    color: #3d3e3e;
+    font-weight: 600;
+    padding-bottom:.7rem;
+}
+
+figcaption ul li:nth-child(2) {
+    color: #545455;
 }
 
 
@@ -188,19 +193,23 @@ footer .FAQ a {
 
     .logo {
         width: 40%;
-    } 
+    }
+    
+    .images-container {
+        column-gap: 10%;
+    }
+
+    figure {
+        width: 228px;
+        height:304px;  
+    }
+
     footer .FAQ {
         width:50%;
         flex-direction: row;
         justify-content: space-evenly;
     }
     
-    .images-container {
-        flex-direction: row;
-        flex-wrap:wrap;
-        align-items: center;
-        justify-content: space-evenly;
-    }
 
 
     .footer {
@@ -214,6 +223,13 @@ footer .FAQ a {
     footer p {
         width: 100%;
         text-align: right;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .images-container {
+        grid-template-columns: auto auto auto;
+        column-gap: 4%;
     }
 }
 
@@ -250,13 +266,25 @@ footer .FAQ a {
         background-color: var(--bground-header-footer);
     }
 
+    .navigation {
+        display: block;
+        position: absolute;
+    }
+    
     nav a {
-        padding:0 2rem;
+        position: relative;
+        top: 10px;
+        padding:0 2rem;   
     }
 
     nav a:hover {
         background-color: var(--divisions-backgrounds);
     }
+
+    .category-banner {
+        height: 18vh;
+    }
+
 }
 
 @media screen and (min-width:1150px) {
@@ -265,13 +293,26 @@ footer .FAQ a {
         width: 20%;
     }
 
-    nav {
-        top:48px;
+    nav a {
+        font-size: 1.2rem;
+        top:8px;
+    }
+
+    .images-container {
+        grid-template-columns: auto auto auto auto;
+        margin-top: 8rem;
     }
 }
 
-@media screen and (min-width:1250px) {
-    nav {
-        top: 40px;
+
+
+@media screen and (min-width:1350px) {
+    figure {
+        width: 275px;
+        height:342px;  
+    }
+
+    .images-container {
+        column-gap: 3.5rem;
     }
 }

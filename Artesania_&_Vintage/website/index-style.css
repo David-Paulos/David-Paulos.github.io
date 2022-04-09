@@ -64,6 +64,14 @@ header a {
 
 /* =============== NAV MENU ==============*/
 nav {
+    display: none;
+    flex-direction: column;
+    background-color:var(--divisions-backgrounds);
+}
+
+
+
+nav {
     display:none;
     flex-direction: column;
     background-color:var(--divisions-backgrounds);
@@ -78,7 +86,6 @@ nav a {
     padding: .7rem 0 .7rem 1rem;
     
 }
-
 
 nav a:hover {
     background-color: gainsboro;
@@ -95,7 +102,7 @@ main {
 
 main img {
     width:100%;
-    height:25vh;
+    height:20vh;
 }
 
 .text-box {
@@ -196,7 +203,7 @@ footer .FAQ a {
     }   
 
     main img {
-        height:35vh;
+        height:28vh;
     }
 
     .description-box p {
@@ -214,8 +221,8 @@ footer .FAQ a {
     } 
 
     main img {
-        height:40vh;
-    }
+        height:36vh;
+    } 
 
     .text-box {
         width:65%;  
@@ -266,7 +273,6 @@ footer .FAQ a {
         width: 25%;
     }
 
-
     nav {
         display: flex;
         flex-direction: row;
@@ -279,17 +285,24 @@ footer .FAQ a {
         background-color: var(--bground-header-footer);
     }
 
-    nav a {
-        padding:0 2rem;
+    .navigation {
+        display: block;
+        position: absolute;
     }
+    
+    nav a {
+        position: relative;
+        top: 10px;
+        padding:0 2rem;   
+    }
+
 
     nav a:hover {
         background-color: var(--divisions-backgrounds);
     }
 
     main img {
-        width:100%;
-        height:50vh;
+        height:44vh;
     }
 
     .favourite-box {
@@ -311,12 +324,14 @@ footer .FAQ a {
         width: 20%;
     }
 
-    nav {
-        top:48px;
+
+    nav a {
+        font-size: 1.2rem;
+        top: 8px;
     }
 
     main img {
-        height:55vh;
+        height:56vh;
     
     }
 
@@ -335,12 +350,10 @@ footer .FAQ a {
 }
 
 @media screen and (min-width:1250px) {
-    nav {
-        top: 40px;
-    }
+
 
     main img {
-        height:70vh;
+        height:60vh;
     }
 
     .favourite-box {
@@ -348,3 +361,16 @@ footer .FAQ a {
     }
 
 }
+
+@media screen and (min-width:1440px) {
+    main img {
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width:1650px) {
+    main img {
+        height: 78vh;
+    }
+}
+

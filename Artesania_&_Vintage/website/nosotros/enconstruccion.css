@@ -214,10 +214,18 @@ footer .FAQ a {
         width:50%;
         background-color: var(--bground-header-footer);
     }
-
-    nav a {
-        padding:0 2rem;
+    .navigation {
+        display: block;
+        position: absolute;
     }
+    
+    nav a {
+        position: relative;
+        top: 10px;
+        padding:0 2rem;
+        
+    }
+
 
     nav a:hover {
         background-color: var(--divisions-backgrounds);
@@ -230,13 +238,8 @@ footer .FAQ a {
         width: 20%;
     }
 
-    nav {
-        top:48px;
-    }
-}
-
-@media screen and (min-width:1250px) {
-    nav {
-        top: 40px;
+    nav a {
+        font-size: 1.2rem;
+        top: 8px;
     }
 }

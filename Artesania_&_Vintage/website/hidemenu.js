@@ -8,3 +8,15 @@ menuIcon.addEventListener('click', () => {
             myNav.style.display = 'none';
         }
 });
+
+
+const catIcon = document.querySelector('.dropdown-cat');
+const dropCon = document.querySelector('.dropdown-container');
+
+catIcon.addEventListener('click', () => {
+    if(dropCon.style.display === 'none') {
+        dropCon.style.display ='flex';}
+        else {
+            dropCon.style.display = 'none';
+        }
+});

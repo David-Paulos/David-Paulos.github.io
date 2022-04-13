@@ -9,7 +9,7 @@
     <meta name="description" content="Tienda online de arte, artesanía y artículos de decoración vintage.">
     <link rel="stylesheet" href="index-style.css">
     <link rel="shortcut icon" href="./images/icons/av-favicon.ico" type="image/x-icon">
-    <script src="hidemenu.js" async></script>
+    <script src="hidemenu.js" type="text/javascript" async></script>
     <link rel="shortcut icon" href="./images/icons/av-favicon.ico" type="image/x-icon">
     <title>Artesanía & Vintage</title>
 </head>
@@ -18,33 +18,78 @@
     <header>
         <div class="header">
             <a href="index.html"><img class="logo" src="./images/icons/logo-3.PNG" alt=""></a>
-            <img class="burger-menu" src="./images/icons/menu_black_24dp.svg" alt="">
+            <button class="burger-menu" type="button"><img src="./images/icons/menu_black_24dp.svg" alt=""></button>
         </div>
     </header>
     <nav>
-        <div class="navigation"></div>
-            <a href="categorias/categorias.html">CATEGORÍAS</a>
-            <a href="blog/blog.html">BLOG</a>
-            <a href="contacto/contacto.html">CONTACTO</a>
+        <div class="categories">
+            <button class="cat-btn">
+                <a href="#" class="dropdown-cat">CATEGORÍAS<img class="icon-cat" src="./images/icons/expand-more.svg"
+                        alt=""></a>
+            </button>
+            <div class="dropdown-container">
+                <a class="sub-cat" href="categorias/artesania/artesania.html">ARTESANÍA</a>
+                <a class="sub-cat" href="categorias/arte/arte.html">ARTE</a>
+                <a class="sub-cat" href="categorias/vintage/vintage.html">VINTAGE</a>
+            </div>
         </div>
+        <a href="blog/blog.html">BLOG</a>
+        <a href="contacto/contacto.html">CONTACTO</a>
+
     </nav>
     <main>
-         <img src="./images/banners/banner-1440.jpg" alt="">
-       
+        <img src="./images/banners/banner-1440.jpg" alt="">
+
         <div class="text-box">
             <p>Nuestra pasión son los objectos artesanales que también
                 nos recuerdan a nuestra infancia, padres y abuelos.</p>
             <p>Descubre nuestra colección de obras artesanales antiguas
                 elaboradas a partir de procesos manuales y tradicionales.</p>
         </div>
-        <div class="favourite-box">
-            <img src="./images/categories/pintura.jpg" alt="">
-            <div class="description-box">
-                <h1>COLECCIÓN PINTURA</h1>
-                <p>Nuestros artículos de pintura que darán un toque de distinción en su hogar.</p>
-                <a href="categorias/artesania/artesania.html">DESCUBRIR</a>
+        <section>
+
+            <div class="section-cat">
+                <p>Descubre los artículos con los que trabajamos clasificados según sus características</p>
+                <div class="images-container">
+                    <a href="./artesania/artesania.html">
+                        <figure>
+                            <img src="../images/categories/chisel.jpg"
+                                alt="Haz click aquí para acceder a la categoría de artesanía">
+                            <figcaption class="layer">
+                                <h2>ARTESANÍA</h2>
+                            </figcaption>
+                            <div class="message">
+                                <h4>Ver</h4>
+                            </div>
+                        </figure>
+                    </a>
+                    <a href="./arte/arte.html">
+                        <figure>
+                            <img src="../images/categories/arte.jpg"
+                                alt="Haz click aquí para acceder a la categoría de arte">
+                            <figcaption class="layer">
+                                <h2>ARTE</h2>
+                            </figcaption>
+                            <div class="message">
+                                <h4>Ver</h4>
+                            </div>
+                        </figure>
+                    </a>
+                    <a href="./vintage/vintage.html">
+                        <figure>
+                            <img src="../images/categories/vintage-2.jpg"
+                                alt="Haz click aquí para acceder a la categoría de vintage">
+                            <figcaption class="layer">
+                                <h2>VINTAGE</h2>
+                            </figcaption>
+                            <div class="message">
+                                <h4>Ver</h4>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer">

@@ -109,6 +109,7 @@ main {
     grid-template-columns: auto auto;
     justify-content: center;
     gap:4rem 2rem;
+    margin-bottom: 5rem;
 }
 
 figure {
@@ -137,13 +138,19 @@ figcaption ul {
     text-align: center;
 }
 
-figcaption ul li:first-child {
+figcaption ul li:first-child, .artist {
     color: #3d3e3e;
     font-weight: 600;
     padding-bottom:.7rem;
 }
 
-figcaption ul li:nth-child(2) {
+.artist {
+    margin-top: -5px;
+    font-style: italic;
+    color: #7f8181;
+}
+
+figcaption ul li:last-child {
     color: #545455;
 }
 
@@ -154,9 +161,12 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 5rem;
     padding:3rem 2rem;
     background-color: var(--bground-header-footer);
+}
+
+.logo-footer {
+    width: 70%;
 }
 
 footer .FAQ {
@@ -169,14 +179,22 @@ footer .FAQ {
     margin-bottom: 3.5rem;
 }
 
-.FAQ__division1 , .FAQ__division2 {
+.FAQ__division1 , .FAQ__division2, .FAQ__division3 {
     display:flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
+    padding: 0 0 2rem 1.5rem;
 }
-footer .FAQ a {
-    color:black;
+
+.FAQ a {
+    color: black;
+}
+
+
+.FAQ__division1 p, .FAQ__division2 p, .FAQ__division3 p {
+    line-height: 5rem;
+    font-weight: 600;
 }
 
 /* ================ MEDIA QUERIES =============== */
@@ -205,25 +223,24 @@ footer .FAQ a {
         height:304px;  
     }
 
-    footer .FAQ {
-        width:50%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    
-
-
-    .footer {
-        width:100%;
+    .FAQ__division1, .FAQ__division2, .FAQ__division3 {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
-        justify-content: space-evenly;
-        flex-direction:row;
+        padding: 0 1rem;
+        margin: .5rem;
+        line-height: 2rem;
     }
+
+
+    footer .FAQ {
+        flex-direction: row;
+    }
+
     
     footer p {
         width: 100%;
-        text-align: right;
     }
 }
 
@@ -286,9 +303,20 @@ footer .FAQ a {
         height: 18vh;
     }
 
+    .FAQ__division1, .FAQ__division2, .FAQ__division3 {
+        padding: 1rem;
+        margin: 0 4rem;
+        line-height: 2rem;
+    }
+
 }
 
 @media screen and (min-width:1150px) {
+
+    .text-box p, .FAQ__division1, .FAQ__division2, .FAQ__division3 {
+        font-size: 20px;
+        line-height: 2.5rem;
+    }
     
     .logo {
         width: 20%;

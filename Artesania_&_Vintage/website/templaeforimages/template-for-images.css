@@ -150,9 +150,12 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 5rem;
     padding:3rem 2rem;
     background-color: var(--bground-header-footer);
+}
+
+.logo-footer {
+    width: 70%;
 }
 
 footer .FAQ {
@@ -165,16 +168,23 @@ footer .FAQ {
     margin-bottom: 3.5rem;
 }
 
-.FAQ__division1 , .FAQ__division2 {
+.FAQ__division1 , .FAQ__division2, .FAQ__division3 {
     display:flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-}
-footer .FAQ a {
-    color:black;
+    padding: 0 0 2rem 1.5rem;
 }
 
+.FAQ a {
+    color: black;
+}
+
+
+.FAQ__division1 p, .FAQ__division2 p, .FAQ__division3 p {
+    line-height: 5rem;
+    font-weight: 600;
+}
 /* ================ MEDIA QUERIES =============== */
 
 @media screen and (min-width:480px) {
@@ -205,17 +215,24 @@ footer .FAQ a {
     }
 
 
-    .footer {
-        width:100%;
+    .FAQ__division1, .FAQ__division2, .FAQ__division3 {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
-        justify-content: space-evenly;
-        flex-direction:row;
+        padding: 0 1rem;
+        margin: .5rem;
+        line-height: 2rem;
     }
+
+
+    footer .FAQ {
+        flex-direction: row;
+    }
+
     
     footer p {
         width: 100%;
-        text-align: right;
     }
 }
 
@@ -267,9 +284,20 @@ footer .FAQ a {
     nav a:hover {
         background-color: var(--divisions-backgrounds);
     }
+    .FAQ__division1, .FAQ__division2, .FAQ__division3 {
+        padding: 1rem;
+        margin: 0 4rem;
+        line-height: 2rem;
+    }
+
 }
 
 @media screen and (min-width:1150px) {
+
+    .text-box p, .FAQ__division1, .FAQ__division2, .FAQ__division3 {
+        font-size: 20px;
+        line-height: 2.5rem;
+    }
     
     .logo {
         width: 20%;

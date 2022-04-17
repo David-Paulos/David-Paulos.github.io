@@ -197,11 +197,6 @@ main img {
 .section-cat {
     width: 100%;
     min-height: 100vh;
-    /* display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;  
-    text-align: center;  */
 }
 
 .section-cat p {

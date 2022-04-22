@@ -3,7 +3,6 @@
 :root {
     --bground-header-footer: #fcf9f5;
     --divisions-backgrounds: #E5ECF0;
-    --divisions-backgrounds-darker: #2d2d3d;
     --buttons: #354a54;
     --span: #b87c4c;
 
@@ -89,81 +88,138 @@ nav a:hover {
 main {
     width: 100%;
     min-height: 100vh;
-}
-
-.category-banner {
     display:flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;       
-    width:100%;
-    height: 14vh;
-    background-color: var(--divisions-backgrounds-darker);
-    color: #ffffff; 
-    margin:2rem 0 4rem;
 }
 
-.images-container {
-    width:100%;
-    display: grid;
-    grid-template-columns: auto auto;
+.description-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap:4rem 2rem;
-    margin-bottom: 5rem;
+    margin-top: 3rem;
 }
 
 figure {
-    width: 154px;
-    height:205px;  
-    margin-bottom: 5rem;
-    transition: .5s ease;
-    transition-delay: .3s;
+    width: 100%;
+    display:flex;
+    flex-direction: column;    
 }
 
 figure img {
     width: 100%;
-    height:100%;
+    height:50vh;
+    border-radius: 1.5rem;
 }
 
-figure:hover {
-    transform: scale(1.08);
-}
-
-figcaption {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-figcaption ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+figure h1 {
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 0.7rem;
-    font-size: 18px;
+    border-bottom: 0.5px solid rgba(140, 126, 126, 0.23);
+    padding-bottom:0.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
 }
 
-
-
-figcaption ul li:first-child, .artist {
-    color: #3d3e3e;
-    font-weight: 600;
-    padding-bottom:.7rem;
+figure h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #acacac;
 }
 
-.artist {
-    margin-top: -5px;
-    font-style: italic;
-    color: #7f8181;
+figure p {
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
-figcaption ul li:last-child {
-    color: #545455;
+summary {
+    cursor: pointer;
+    position:relative;
 }
 
+details summary::after {
+    content: url(./images/icons/arrow.png);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* == ARROW ANIMATION == */
+details[open] summary::after {
+    animation-name:rotation_open;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotation_open {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+details:not([open]) summary:after {
+    animation-name:rotation_close;
+    animation-duration: 250ms;
+}
+
+@keyframes rotation_close {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+details li:first-child {
+    margin-top: 1rem;
+}
+
+details ul {
+    margin-bottom: 5rem;
+}
+
+details[open] > ul > li {
+    opacity:0;
+    animation-name: showContent;
+    animation-duration: 350ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  details[open] > ul {
+    animation-name: slideDown;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+  
+    to {
+      opacity: 1;
+      height: 3vh;
+      padding-bottom: 2.6rem;
+    }
+}
 
 /* ============ FOOTER =========== */
 footer {
@@ -222,15 +278,21 @@ footer .FAQ {
 
     .logo {
         width: 40%;
-    }
-    
-    .images-container {
-        column-gap: 10%;
-    }
+    } 
 
     figure {
-        width: 228px;
-        height:304px;  
+        margin-top:3rem;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    figure img {
+        width: 70%;
+        height:50vh;
+        border-radius: 1.5rem;
     }
 
     .FAQ__division1, .FAQ__division2, .FAQ__division3 {
@@ -251,13 +313,6 @@ footer .FAQ {
     
     footer p {
         width: 100%;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .images-container {
-        grid-template-columns: auto auto auto;
-        column-gap: 4%;
     }
 }
 
@@ -309,8 +364,9 @@ footer .FAQ {
         background-color: var(--divisions-backgrounds);
     }
 
-    .category-banner {
-        height: 18vh;
+    figure img {
+        width: 60%;
+        height:70vh;
     }
 
     .FAQ__division1, .FAQ__division2, .FAQ__division3 {
@@ -318,7 +374,6 @@ footer .FAQ {
         margin: 0 4rem;
         line-height: 2rem;
     }
-
 }
 
 @media screen and (min-width:1150px) {
@@ -336,22 +391,39 @@ footer .FAQ {
         font-size: 1.2rem;
         top: 8px;
     }
+    
+    figure {
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between;   
+    }
 
-    .images-container {
-        grid-template-columns: auto auto auto auto;
-        margin-top: 8rem;
+    figure:last-child{
+        align-items: flex-start;
+    }
+
+    figure img {
+        width: 70%;
+        height:85vh;
+    }
+
+    figcaption {
+        width: 30%;
+        margin-left:4rem;
     }
 }
 
+@media screen and (min-width:1250px) {
 
-
-@media screen and (min-width:1350px) {
-    figure {
-        width: 275px;
-        height:342px;  
+    figure img {
+        width: 55%;
+        height:100vh;
     }
 
-    .images-container {
-        column-gap: 3.5rem;
+    figcaption {
+        width: 45%; 
     }
+    
 }

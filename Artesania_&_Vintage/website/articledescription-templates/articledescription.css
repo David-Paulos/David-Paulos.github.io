@@ -142,7 +142,7 @@ summary {
 }
 
 details summary::after {
-    content: url(./images/icons/arrow.png);
+    content: url(../../images/icons/arrow.png);
     position: absolute;
     right: 0;
     top: 0;

@@ -1,0 +1,53 @@
+/* ================== HTML PAGE FORMATTING ================*/
+
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-size: 14px;
+}
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-text{
+    text-align: center;
+    width: 400px;
+}
+
+footer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+footer a {
+    color: black;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    background-color: bisque;
+    border-radius: 0.5rem;
+}

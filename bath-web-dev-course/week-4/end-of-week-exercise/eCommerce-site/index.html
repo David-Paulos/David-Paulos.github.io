@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" async></script>
+    <title>eCommerce</title>
+</head>
+<body>
+    <header>
+        <h1>Clothing shop Website</h1>
+    </header>
+    <main>
+        <div id="items">
+            <figure>
+                <div class="image-container">
+                    <img src="./images/lady-jeans2-25£.jpg" alt="">
+                </div>
+                <figcaption>
+                    <ul>
+                        <li>
+                            <h2>Jeans</h2>
+                        </li>
+                        <li>
+                            <h2>25£</h2>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <select name="jeans-size" id="size" data-item="Jeans" data-price="25" data-stock="10" data-image-src="./images/lady-jeans2-25£.jpg">
+                                <option value="">Please select the size</option>
+                                <option value="30">Size 30</option>
+                                <option value="32">Size 32</option>
+                                <option value="34">Size 34</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button type="button" class="addToCartButton">Add to Cart</button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" min="0" max="10" id="quantity" name="quantity">
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <a href="https://github.com/David-Paulos/bath-web-dev/tree/main/week-4/end-of-week-exercise/eCommerce-site" target="_blank">See the code</a>
+        </div>
+        <div>
+            <h2>Shopping Cart</h2>
+            <div id="shopping-cart">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

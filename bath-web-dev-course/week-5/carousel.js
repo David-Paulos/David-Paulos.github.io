@@ -15,8 +15,8 @@ arrowLeft.addEventListener('click', () => {
             return    
         } else {
             carouselInner.style.backgroundColor = colors[n]
-            break;
-        }  
+        }
+        break;  
     }
     console.log(n)
 })

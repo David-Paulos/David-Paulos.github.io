@@ -369,7 +369,7 @@ header div p:nth-of-type(2) span {
   margin-left: var(--text-margin);
   margin-right: var(--text-margin);
   margin-top: 5em;
-  height: 45vh;
+  height: 32vh;
 }
 #splash-text p {
   font-size: var(--20px);
@@ -660,7 +660,7 @@ footer {
     margin-left: var(--text-margin-desktop);
     margin-right: 10em;
     margin-top: 2em;
-    height: 30vh;
+    height: 35vh;
   }
   #splash-text p {
     font-size: var(--26px);

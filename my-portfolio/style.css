@@ -368,8 +368,8 @@ header div p:nth-of-type(2) span {
 #splash-text {
   margin-left: var(--text-margin);
   margin-right: var(--text-margin);
-  margin-top: 5em;
-  height: 32vh;
+  margin-top: 4em;
+  height: 28vh;
 }
 #splash-text p {
   font-size: var(--20px);

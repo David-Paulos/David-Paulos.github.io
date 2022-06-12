@@ -382,8 +382,7 @@ header div p:nth-of-type(2) span {
 }
 .homepage-arrow {
   width: 100%;
-  background-color: 70px;
-  margin-top: 1em;
+  margin-top: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -394,7 +393,7 @@ header div p:nth-of-type(2) span {
 #projects {
   width: 100%;
   height: 100px;
-  margin-top: 8em;
+  margin-top: 4em;
 }
 .projects-section {
   width: 100%;
@@ -485,7 +484,9 @@ header div p:nth-of-type(2) span {
 /* ============= ABOUT SECTION ============== */
 
 #about {
-  margin-top: 8em;
+  width: 100%;
+  height: 100px;
+  margin-top: 4em;
 }
 .about-section {
   display: flex;
@@ -533,11 +534,10 @@ header div p:nth-of-type(2) span {
 #contact {
   width: 100%;
   height: 100px;
-  margin-top: 10em;
+  margin-top: 4em;
 }
 .contact-section {
   width:100%;
-  height:60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,6 +562,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top:30px;
+  margin-bottom:100px;
 }
 
 /* =============== MEDIA QUERIES FOR TABLETS =============== */
@@ -711,9 +713,6 @@ footer {
   /* ============= CONTACT SECTION ============== */
   #contact {
     margin-top: 2em;
-  }
-  .contact-section {
-    height:70vh;
   }
   #social-connections {
     width: 70%;

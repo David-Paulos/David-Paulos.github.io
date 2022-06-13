@@ -694,6 +694,9 @@ footer {
   }
   #line-parts p {
     margin-bottom: 1.5em;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
   }
 
   /* === HOME TEXT === */

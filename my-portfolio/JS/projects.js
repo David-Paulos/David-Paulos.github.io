@@ -100,38 +100,25 @@ evenFigures.forEach(evenFigure => {
     gsap.from(evenFigure, {
         scrollTrigger: {
             trigger: evenFigure,
+            start:'top 80%',
+            end: 'center 200px',
+            toggleActions: 'play pause resume none',  
         },
         xPercent:-300,
-    })
-})
-
-evenFigures.forEach(evenFigure => {
-    gsap.to(evenFigure, {
-        scrollTrigger: {
-            trigger: evenFigure,
-            toggleActions: 'play pause resume none',
-        },
-        xPercent:0,
         duration: 1.2
     })
 })
+
 const oddFigures = gsap.utils.toArray('figure:nth-of-type(odd)')
 oddFigures.forEach(oddFigure => {
     gsap.from(oddFigure, {
         scrollTrigger: {
             trigger: oddFigure,
-        },
-        xPercent:+300,
-    })
-})
-
-oddFigures.forEach(oddFigure => {
-    gsap.to(oddFigure, {
-        scrollTrigger: {
-            trigger: oddFigure,
+            start:'top 80%',
+            end: 'center 200px',
             toggleActions: 'play pause resume none',
         },
-        xPercent:0,
+        xPercent:+300,
         duration: 1.2
     })
 })

@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+
+/* =============== HTML PAGE FORMATTING ============ */
+/* ====== MOBILE FIRST DESIGN ====== */
+
+html{
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    width:100%;
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    color:black;
+}
+
+/* ============= HEADER ============== */
+header {
+    width:100%;
+    height:70px;
+    background-color: #091d35;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 1rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 3;
+}
+header h1 {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+header a {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 800;
+}
+header svg {
+    cursor:pointer;
+}
+
+/* ============= NAV MENU ============= */
+nav {
+    width: 100%;
+    background-color: #091d35;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 4;
+    animation-name: slideIn;
+    animation-duration:450ms;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+}
+@keyframes slideIn {
+    from{right:-100%}
+    to{right:0%}
+}
+nav.close {
+    width: 100%;
+    background-color: #091d35;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 4;
+    animation-name: slideOut;
+    animation-duration:450ms;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+}
+@keyframes slideOut {
+    from{right:0%}
+    to{right:-100%}
+}
+nav svg{
+    position:absolute;
+    top: 2.5em;
+    right: 2.5em;
+    cursor:pointer;
+}
+.underline-animation {
+    display: inline-block;
+    position: relative;
+    font-size: 4.2em;
+    color: white;
+    font-weight: 600;
+    margin:.5em;
+}  
+.underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e50e0b;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}  
+.underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* ================= MAIN ================ */
+
+main{
+    width:100%;
+    margin-top:70px;
+}
+
+/* ============= WELCOME BANNER ============= */
+
+
+#main__welcome-banner {
+    width:100%;
+    height: 50vh;
+    background-image: url(../images/pexels-chait-goli-1918291.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom:10em;
+    isolation:isolate;
+}
+#main__welcome-banner__inner-text {
+    width:100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+#main__welcome-banner__inner-text::after {
+    content:'';
+    background-color: rgb(147, 162, 217);
+    position:absolute;
+    inset:0;
+    z-index: -1;
+    mix-blend-mode: multiply;
+}
+#main__welcome-banner__inner-text h2 {
+    text-align: center;
+    color: white;
+    font-size: 4em;
+}
+
+/* ============= PROPERTY CARDS CONTAINER ============= */
+
+.property-cards__container {
+    width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ============= PROPERTY CARD ============= */
+
+.property-card {
+    width:340px;
+    height:600px;
+    border-radius:7px;
+    overflow: hidden;
+    margin-bottom: 5em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.property-card:hover {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 2px 4px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+}
+.property-card__image {
+    width:100%;
+    height:45%; 
+}
+.property-card__image img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.property-card__description{
+    width:100%;
+    height:55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.property-card__description-part1{
+    width:100%;
+    height:65%;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.property-card__description-part1 h2 {
+    font-size:2.8em;
+    font-weight: 800;
+}
+.property-card__description-part1 h4 {
+    font-size:1.5em;
+    font-weight: 400;
+}
+.property-card__description-part1 h3 {
+    font-size: 2.1em;
+    font-weight: 600;
+}
+.property-card__description-part1 a {
+    background-color: #ba1613;
+    border-radius: 5px;
+    outline-offset: 4px;
+    align-self: center;
+}
+.property-card__description-part1 span {
+    font-size: 2em;
+    font-weight: 800;
+    color:white;
+    display: block;
+    padding: 0.08em .7em;
+    background-color: #e50e0b;
+    border-radius:5px;
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-6px);
+}
+.property-card__description-part1 a:hover span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-5px);
+}
+.property-card__description-part1 a:active span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-2px);
+}
+.property-card__description-part2{
+    width:100%;
+    height:45%;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.property-card__description-part2__icons {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.property-card__description-part2__icons p {
+    font-size: 1.4em;
+}
+.property-card__description-part2__icons h4 {
+    font-size: 1.6em;
+}
+
+/* ============== CONTACT PARTS ==============*/
+
+#main__contact-parts{
+    width:100%;
+    height:1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============== ONE STEP AWAY SECTION ==============*/
+
+#main__one-step-away{
+    width:100%;
+    height: 50%;
+    background-color: #e4ecf2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main__one-step-away > h2 {
+    text-align: center;
+    padding:1em 1em;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#ways-of-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ways-of-contact__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 1em;
+    cursor: pointer;
+}
+
+.ways-of-contact__inner h3 {
+    text-align: center;
+    padding:.2em 0;
+    font-size: 2.6em;
+    font-weight: 800;
+}
+.ways-of-contact__inner p {
+    text-align: center;
+    padding:.1em 0;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+/* ============== CONTACT US FORM ==============*/
+
+#main__contact-us-form{
+    width:100%;
+    height: 50%;
+    background-color: #1d2d42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#main__contact-us-form > h2 {
+    text-align: center;
+    padding:1em 1em;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: white;
+}
+#main__contact-us-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#main__contact-us-form label {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin:.5em 2em;
+}
+#main__contact-us-form input[type="text"], 
+#main__contact-us-form input[type="email"] {
+    background-color: inherit;
+    border-bottom: 2px solid white;
+    margin:0.5em 2em;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 400;
+    font-style: italic;
+}
+#main__contact-us-form h3 {
+    margin:0.5em 2em;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: white;
+}
+#main__contact-us-form ul{
+    margin:0 5.5em;
+    width:100px;
+}
+
+#main__contact-us-form ul li {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main__contact-us-form ul label {
+    margin:0;
+}
+
+#main__contact-us-form ul input[type="radio"] {
+    appearance: revert;
+}
+
+#main__contact-us-form textarea {
+    align-self: center;
+    background-color: inherit;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+#main__contact-us-form button{
+    background-color: #ba1613;
+    border-radius: 5px;
+    outline-offset: 4px;
+    align-self: center;
+    margin: 2em 0;
+    cursor: pointer;
+}
+
+#main__contact-us-form button span {
+    font-size: 2em;
+    font-weight: 800;
+    color:white;
+    display: block;
+    padding: 0.28em 1em;
+    background-color: #e50e0b;
+    border-radius:5px;
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-6px);
+}
+#main__contact-us-form button:hover span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-5px);
+}
+#main__contact-us-form button:active span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-2px);
+}
+
+/* ============== FORM SUBMITION CONFIRMATION ==============*/
+
+#main__form-submission-confirmation{
+    width: 250px;
+    min-height: 200px;
+    background-color: #e4ecf2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    
+}
+
+#main__form-submission-confirmation p {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: black;  
+}
+
+#main__form-submission-confirmation button{
+    background-color: #1d2d42;
+    border-radius: 5px;
+    outline-offset: 4px;
+    align-self: center;
+    margin: 2em 0;
+    cursor: pointer;
+}
+
+#main__form-submission-confirmation button span {
+    font-size: 2em;
+    font-weight: 800;
+    color:white;
+    display: block;
+    padding: 0.28em 1em;
+    background-color: #2e4a6b;
+    border-radius:5px;
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-6px);
+}
+#main__form-submission-confirmation button:hover span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-5px);
+}
+#main__form-submission-confirmation button:active span {
+    transition:transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-2px);
+}
+
+/* ============== FOOTER ==============*/
+
+footer {
+    width: 100%;
+    padding: 2em 0;
+    background-color: #091d35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h2 {
+    text-align: center;
+    padding:1em 1em;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: white;
+}
+
+#footer-logos {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:900px){
+    main > h2 {
+        font-size: 2.3em;
+    }
+    #main__one-step-away > h2 {
+        font-size: 2.3em;
+        margin-bottom: 1em;
+    }
+    #main__contact-us-form > h2 {
+        font-size: 2.3em;
+        margin-top: 1em;
+    }
+
+    /* ============== CONTACT PARTS ==============*/
+    #main__contact-parts{
+        height:750px;
+        flex-direction: row;
+    }
+
+    /* ============== ONE STEP AWAY SECTION ==============*/
+    #main__one-step-away{
+        width:50%;
+        height: 100%;
+    }
+
+    /* ============== CONTACT US FORM ==============*/
+    #main__contact-us-form{
+        width:50%;
+        height: 100%;
+    }
+}

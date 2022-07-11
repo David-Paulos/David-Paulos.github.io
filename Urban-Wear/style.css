@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&family=Permanent+Marker&display=swap');
+
+
+/* ================== HTML PAGE FORMATTING ================*/
+/* ====== MOBILE FIRST DESIGN ====== */
+
+html{
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    width:100%;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ============== HEADER ============== */
+
+header {
+    width:100%;
+    height:70px;
+    background-color: #d6ff38;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:.5em 1em;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 3;
+}
+header h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.7em;
+    color: black;
+    cursor: pointer;
+}
+
+header a{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.7em;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+header svg{
+    cursor: pointer;
+}
+
+/* ============= NAVIGATION MENU ============= */
+
+#navigation-menu{
+    width:100%;
+    background-color: #d6ff38;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    right: 0;
+    z-index:4;
+    animation-name: slideIn;
+    animation-duration: 350ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#navigation-menu.close{
+    width:100%;
+    background-color: #d6ff38;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    z-index:4;
+    animation-name: slideOut;
+    animation-duration: 350ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes slideIn {
+    from{
+        right:-100%;
+    }
+    to{
+        right:0;
+    }   
+}
+@keyframes slideOut {
+    from{
+        right:0;
+    }
+    to{
+        right:-100%;
+    }
+}
+#navigation-menu a {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.8rem;
+    color: black;
+    margin: .5rem 0;
+    padding: 1rem 1rem;  
+}
+#navigation-menu a:nth-of-type(1){
+    opacity:0;
+    animation-name: showText;
+    animation-delay:350ms;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+#navigation-menu a:nth-of-type(2){
+    opacity:0;
+    animation-name: showText;
+    animation-delay:450ms;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+#navigation-menu a:nth-of-type(3){
+    opacity:0;
+    animation-name: showText;
+    animation-delay:500ms;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+@keyframes showText {
+    from{
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+#navigation-menu svg {
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    right:0;
+    margin: 2rem;
+}
+
+/* ================= MAIN ================ */
+
+main {
+    width: 100%;
+    margin-top:70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > h2 {
+    margin:2em 0;
+}
+
+/* =========== INFINITE MESSAGE =========== */
+
+#message-wrapper {
+    width:100%;
+    height:90px;
+    overflow: hidden;
+}
+
+#infinite-message {
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding:1em 0;
+    animation: infiniteSlide 120s linear infinite;
+}
+
+#infinite-message p {
+    display: inline-block;
+    padding:0 .3em;
+    font-size: 2em;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+@keyframes infiniteSlide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* =========== EXPLORE-MORE SECTION =========== */
+
+#explore-more{
+    width:100%;
+    height:80vh;
+}
+
+#woman-section {
+    width:100%;
+    height:50%;  
+    background-image: url(./images/woman-banner.jpg);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#man-section {
+    width:100%;
+    height:50%;
+    background-image: url(./images/man-banner.jpg);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#woman-section h2, #man-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2em;
+    color: #d6ff38;
+    text-align: center;
+}
+
+
+/* =========== INFINITE MESSAGE TO RIGHT =========== */
+
+#infinite-message-toRight {
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding:1em 0;
+    animation: infiniteSlideToRight 120s linear infinite;
+}
+
+#infinite-message-toRight p {
+    display: inline-block;
+    padding:0 .3em;
+    font-size: 2em;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+@keyframes infiniteSlideToRight {
+    0% {
+      transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+}
+/* ===== WELCOME SECTION ===== */
+
+#welcome-section {
+    width:100%;
+    height:30vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+
+#video-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box{
+    position:absolute;
+    top:0;
+    left:0;
+    color:black;
+    padding:.5em;
+    width:100%;
+    height:30vh;
+    text-align: center;
+    background-color:white;
+    mix-blend-mode: lighten;
+}
+
+.text-box h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4em;
+    transition:transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform:scale(1)
+}
+
+.text-box h2:hover {
+    transform:scale(1.2);
+}
+
+/* ====== CLOTHING IMAGES SECTION ===== */
+
+.clothing-images {
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+figure {
+    width:280px;
+    height: 380px;
+    margin: 1.5em;
+}
+.img-container {
+    width: 280px;
+    height:340px;
+    overflow:hidden;
+}
+
+.img-container img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: transform 350ms linear;
+    transform:scale(1);
+}
+
+.img-container img:hover{
+    transform:scale(1.2);
+}
+
+figcaption {
+    padding-top:.7em;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+figcaption h3{
+    font-size: 1.2em;
+    font-family: 'Permanent Marker', cursive;
+}
+
+figcaption h3:nth-child(1){
+    background-color: #d6ff38;
+}
+
+/* =========== SALE ADVERT SECTION =========== */
+
+.sale-advert-section{
+    width:100%;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sale-advert-text{
+    width:100%;
+    height:50%;
+    background: rgb(214,255,56);
+    background: -moz-linear-gradient(0deg, rgba(214,255,56,1) 0%, rgba(237,255,170,1) 36%, rgba(255,255,255,1) 98%);
+    background: -webkit-linear-gradient(0deg, rgba(214,255,56,1) 0%, rgba(237,255,170,1) 36%, rgba(255,255,255,1) 98%);
+    background: linear-gradient(0deg, rgba(214,255,56,1) 0%, rgba(237,255,170,1) 36%, rgba(255,255,255,1) 98%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6ff38",endColorstr="#ffffff",GradientType=1);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+
+.sale-advert-text p:nth-of-type(1) {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.sale-advert-text p:nth-of-type(2) {
+    width:160px;
+    text-align: center;
+    font-size: .8em;
+    font-weight: 400;   
+}
+
+.sale-advert-text h2 {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.banner-container{
+    width:100%;
+    height:50%;
+    background-image: url(./images/banner2.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* =========== FOOTER =========== */
+
+footer {
+    width:100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color:#d6ff38;
+    padding:1em 0.5em;
+}
+
+footer a {
+    color: white;
+    font-size: 1.15em;
+    padding:1em 0.5em;
+}
+
+#my-signature {
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#my-signature h2 {
+    text-align: center;
+    padding:1em 1em;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: white;
+}
+
+#footer-logos {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =============== MEDIA QUERIES ============= */
+
+@media screen and (min-width:1000px) {
+    /* =========== EXPLORE-MORE SECTION =========== */
+
+    #explore-more{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #woman-section {
+        width:50%;
+        height:100%;  
+    }
+
+    #man-section {
+        width:50%;
+        height:100%;
+    }
+
+    #woman-section h2, #man-section h2 {
+        font-size: 3.5em;
+    }
+
+    /* ====== CLOTHING IMAGES SECTION ===== */
+
+    .clothing-images {
+        margin-bottom:4em;
+    }
+
+    figure {
+        width:320px;
+        height: 420px;
+        margin: 2em;
+    }
+    .img-container {
+        width: 320px;
+        height:380px;
+    }
+
+    /* =========== SALE ADVERT SECTION =========== */
+
+    .sale-advert-section{
+        flex-direction: row;
+    }
+
+    .sale-advert-text{
+        width:50%;
+        height:100%;   
+    }
+
+    .banner-container{
+        width:50%;
+        height:100%;
+    }
+}

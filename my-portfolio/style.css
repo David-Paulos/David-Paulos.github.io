@@ -2,9 +2,8 @@
 
 :root {
   /* == colors: == */
-  --letter: #4D4637;
-  --nav-color: #B3AA99;
-  --page-background: #F7EBD4;
+  --letter: #0a0b36;
+  --nav-color: #97b9e7;
   /* == font-size: == */
   --20px: 1.25rem;
   --24px: 1.5rem;
@@ -41,10 +40,11 @@ html {
 }
 body {
   width: 100%;
-  background: var(--page-background);
+  background-color: #f2feff;
   font-family: 'Iceberg', cursive;
   font-size: 16px;
   color: var(--letter);
+  overflow-x: hidden;
 }
 .creamy-text {
   font-family: 'Lemon', cursive;
@@ -60,7 +60,6 @@ body {
     -2px 0 0 var(--letter),
     0px 4px 4px var(--letter);
 }
-
 /* ================== NAV MENU ================== */
 nav {
   width: 100%;
@@ -499,14 +498,14 @@ header div p:nth-of-type(2) span {
   color: var(--letter);
   padding: 0.5em;
   border-radius: 5px;
-  background-color:#dcaf5b63;
-  box-shadow: rgba(101, 75, 17, 0.414) 0px 50px 100px -20px, rgba(101, 75, 17, 0.3) 0px 30px 60px -30px, rgba(101, 75, 17, 0.35) 0px -2px 6px 0px inset; 
+  background-color:#7ff9c0;
+  box-shadow: rgba(17, 101, 84, 0.414) 0px 50px 100px -20px, rgba(17, 18, 101, 0.3) 0px 30px 60px -30px, rgba(37, 17, 101, 0.35) 0px -2px 6px 0px inset; 
 }
 #projects-section__json-receiver figure figcaption .project-buttons a:hover{
-  background-color:#eac0734f;
+  background-color:#acffd8a5;
 }
 #projects-section__json-receiver figure figcaption .project-buttons a:active{
-  background-color:#dcaf5b12;
+  background-color:#b6ffdd61;
 }
 /* ============= ABOUT SECTION ============== */
 
@@ -602,8 +601,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top:30px;
-  margin-bottom:100px;
+  padding-top:30px;
+  padding-bottom:100px;
 }
 
 /* =============== MEDIA QUERIES FOR TABLETS =============== */
@@ -679,7 +678,7 @@ footer {
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 1;
+    z-index:1;
     top: 120px;
     right: 62px;
     
